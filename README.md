@@ -1,5 +1,12 @@
 # Mixed-Effects Modelling for Ergonomics Research
 
+## Authors
+
+- [Michael W. B. Watterworth, MHSc](https://orcid.org/0000-0001-5227-4554), Ontario Tech University
+- [Nicholas J. La Delfa, PhD](https://orcid.org/0000-0002-6928-5441), Ontario Tech University
+- [Michael A. Rotondi, PhD](https://discover.academics.yorku.ca/Michael.Rotondi), York University
+
+Correspondence regarding the tutorial may be directed to [Nicholas J. La Delfa](mailto:nicholas.ladelfa@ontariotechu.ca).
 This folder contains beginner-oriented R code for the worked examples in *Moving Beyond Repeated Measures ANOVA: A Practical Guide to Mixed-Effects Modeling for Ergonomics Research*.
 
 ## View the tutorial
@@ -36,14 +43,14 @@ The `performance` package produces the model-diagnostic figures that should be r
 ## Files
 
 ```text
-LMM_Ergonomics_Tutorial.qmd   Annotated, reader-facing tutorial
-R/00_Complete_Analysis.R      All examples in one script
-R/01_Factor_Models.R          Example 1A only
-R/02_Continuous_Model.R       Example 1B only
-R/03_Missing_Data.R           Example 2 only
-R/04_Continuous_and_Factor_Figure.R  Opening two-panel figure
-data/                         Supplied illustrative dataset
-optional/                     Data-generation code, not required
+LMM_Ergonomics_Tutorial.qmd           Annotated, reader-facing tutorial
+R/00_Complete_Analysis.R              All examples in one script
+R/01_Factor_Models.R                  Example 1A only
+R/02_Continuous_Model.R               Example 1B only
+R/03_Missing_Data.R                   Example 2 only
+R/04_Continuous_and_Factor_Figure.R   Opening two-panel figure
+data/                                 Supplied illustrative dataset
+optional/                             Data-generation code, not required
 ```
 
 The three analysis example scripts repeat the package-loading and data-preparation steps deliberately. This makes each script self-contained and easier for a new R user to follow.
