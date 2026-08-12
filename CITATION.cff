@@ -4,37 +4,22 @@ message: "Please cite the accompanying article. When referring specifically to t
 type: software
 title: "Mixed-Effects Modelling for Ergonomics Research"
 version: 1.0.0
+license: MIT
 
 authors:
   - given-names: "Michael W. B."
     family-names: "Watterworth"
     orcid: "https://orcid.org/0000-0001-5227-4554"
+    affiliation: "Faculty of Health Sciences, Ontario Tech University"
 
   - given-names: "Nicholas J."
     family-names: "La Delfa"
     orcid: "https://orcid.org/0000-0002-6928-5441"
+    affiliation: "Faculty of Health Sciences, Ontario Tech University"
 
   - given-names: "Michael A."
     family-names: "Rotondi"
+    affiliation: "School of Kinesiology and Health Science, York University"
 
 repository-code: "https://github.com/Watterworth/lmm-ergonomics-guide"
 url: "https://watterworth.github.io/lmm-ergonomics-guide/"
-
-preferred-citation:
-  type: article
-  title: "Moving Beyond Repeated Measures ANOVA: A Practical Guide to Mixed-Effects Modeling for Ergonomics Research"
-  authors:
-    - given-names: "Michael W. B."
-      family-names: "Watterworth"
-      orcid: "https://orcid.org/0000-0001-5227-4554"
-
-    - given-names: "Nicholas J."
-      family-names: "La Delfa"
-      orcid: "https://orcid.org/0000-0002-6928-5441"
-
-    - given-names: "Michael A."
-      family-names: "Rotondi"
-
-  journal: "JOURNAL NAME"
-  year: 2026
-  doi: "ARTICLE DOI"
