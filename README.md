@@ -38,7 +38,9 @@ install.packages(c(
 ))
 ```
 
-The `performance` package produces the model-diagnostic figures that should be reviewed before interpreting or reporting results. `ggplot2` and `patchwork` reproduce the opening two-panel figure, while `sjPlot` plots the continuous model's population-level predictions over the raw observations.
+The `performance` package produces the model-diagnostic figures that should be reviewed before interpreting or reporting results. 
+
+`ggplot2` and `patchwork` reproduce the opening two-panel figure, while `sjPlot` plots the continuous model's population-level predictions over the raw observations.
 
 ## Files
 
@@ -54,8 +56,6 @@ optional/                             Data-generation code, not required
 ```
 
 The three analysis example scripts repeat the package-loading and data-preparation steps deliberately. This makes each script self-contained and easier for a new R user to follow.
-
-Running `R/00_Complete_Analysis.R` or `R/04_Continuous_and_Factor_Figure.R` saves `continuous_vs_factor_analysis.png` in the project folder.
 
 ## Analysis conventions
 
