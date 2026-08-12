@@ -45,14 +45,14 @@ The `performance` package produces the model-diagnostic figures that should be r
 ## Files
 
 ```text
-LMM_Ergonomics_Tutorial.qmd           Annotated, reader-facing tutorial
-R/00_Complete_Analysis.R              All examples in one script
-R/01_Factor_Models.R                  Example 1A only
-R/02_Continuous_Model.R               Example 1B only
-R/03_Missing_Data.R                   Example 2 only
-R/04_Continuous_and_Factor_Figure.R   Opening two-panel figure
-data/                                 Supplied illustrative dataset
-optional/                             Data-generation code, not required
+LMM_Ergonomics_Tutorial.qmd           #Annotated, reader-facing tutorial
+R/00_Complete_Analysis.R              #All examples in one script
+R/01_Factor_Models.R                  #Example 1A only
+R/02_Continuous_Model.R               #Example 1B only
+R/03_Missing_Data.R                   #Example 2 only
+R/04_Continuous_and_Factor_Figure.R   #Opening two-panel figure
+data/                                 #Supplied illustrative dataset
+optional/                             #Data-generation code, not required
 ```
 
 The three analysis example scripts repeat the package-loading and data-preparation steps deliberately. This makes each script self-contained and easier for a new R user to follow.
