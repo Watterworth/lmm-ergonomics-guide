@@ -1,0 +1,22 @@
+Package: lmmErgonomicsGuide
+Type: Project
+Title: Mixed-Effects Modelling for Ergonomics Research
+Version: 1.0.0
+Authors@R:
+    c(person("Michael W. B.", "Watterworth", role = c("aut", "cre")),
+      person("Nicholas J.", "La Delfa", role = "aut"),
+      person("Michael A.", "Rotondi", role = "aut"))
+Description: R dependencies required to execute and render the accompanying
+    mixed-effects modelling tutorial for ergonomics researchers.
+Encoding: UTF-8
+Imports:
+    emmeans,
+    ez,
+    ggplot2,
+    knitr,
+    lme4,
+    lmerTest,
+    patchwork,
+    performance,
+    rmarkdown,
+    sjPlot
