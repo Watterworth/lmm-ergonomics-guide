@@ -64,6 +64,10 @@ LICENSE                        MIT License
 * Tukey adjustment is used for the reach-bin pairwise comparisons within each sex.
 * Holm adjustment is used for the two tests of sex-specific slopes against zero.
 
+## Funding
+
+This work was supported by the Natural Sciences and Engineering Research Council of Canada (NSERC; grant 210435, 2020), awarded to Nicholas J. La Delfa. Michael A. Rotondi is partially supported by the Canadian Institutes of Health Research (CIHR) and the Public Health Agency of Canada (PHAC) through the Applied Public Health Chairs Program (reference 192587).
+
 ## Citation
 
 Citation information is available through the **Cite this repository** link on GitHub. The archived version corresponding to the published article will also be made available through Zenodo.
