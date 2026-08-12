@@ -954,4 +954,4 @@ check_model(model_bins_missing)
 
 ## 6. Scripts included with the tutorial
 
-`R/00_Complete_Analysis.R` contains the complete workflow in one file. The remaining scripts contain one example each and repeat their setup so they can be run independently. A beginner can therefore start with the annotated tutorial and later use the shorter scripts as analysis templates.
+In addition to the annotated tutorial provided in `LMM_Ergonomics_Tutorial.qmd`, `Complete_Analysis_Script.R` contains the complete analysis workflow in a single conventional R script that can be run from top to bottom.
