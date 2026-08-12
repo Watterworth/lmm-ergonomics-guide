@@ -57,16 +57,6 @@ The three analysis example scripts repeat the package-loading and data-preparati
 
 Running `R/00_Complete_Analysis.R` or `R/04_Continuous_and_Factor_Figure.R` saves `continuous_vs_factor_analysis.png` in the project folder.
 
-## Render or modify the tutorial locally
-
-Readers who wish to modify the tutorial or reproduce the rendered webpage can run the following command from the project folder if Quarto is installed:
-
-```bash
-quarto render LMM_Ergonomics_Tutorial.qmd
-```
-
-The rendered HTML files will be placed in `_site/`. Rendering is not required to view the online tutorial or run the supplied R scripts.
-
 ## Analysis conventions
 
 - `Reach_c10 = 0` represents the average observed reach distance.
