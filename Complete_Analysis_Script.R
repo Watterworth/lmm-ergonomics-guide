@@ -226,6 +226,7 @@ pairs_bins_df <- as.data.frame(pairs_bins)
 
 # Prepare the significant Tukey-adjusted comparisons for plotting.
 reach_order <- c("Near", "Mid", "Far")
+
 emm_bins_df$x_position <- match(
   as.character(emm_bins_df$Reach_bin),
   reach_order
