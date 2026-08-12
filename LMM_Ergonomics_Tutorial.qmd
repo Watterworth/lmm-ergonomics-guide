@@ -717,7 +717,7 @@ print(reach_trends_pair)
 
 ### Plot the model-estimated relationships
 
-The sex-specific relationships can be visualized by plotting population-level predictions from the fitted LMM over the raw observations. Since reach is represented by a single linear term, the slopes of the prediction lines correspond to the EMTs reported above. The prediction lines should be obtained from the fitted mixed-effects model rather than by adding separate regression lines with `geom_smooth()`, which would fit new models to the raw observations.
+The sex-specific relationships can be visualized by plotting population-level predictions from the fitted LMM over the raw observations. Since reach is represented by a single linear term, the slopes of the prediction lines correspond to the EMTs reported above. The prediction lines should be obtained from the fitted mixed-effects model rather than by adding separate regression lines with `geom_smooth()`, which would fit new models to the raw observations. 
 
 
 ```{r}
