@@ -41,6 +41,8 @@ author:
         state: Ontario
         country: Canada
 
+output-file: index.html
+
 format:
   html:
     toc: true
