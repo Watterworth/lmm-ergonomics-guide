@@ -59,6 +59,13 @@ This tutorial accompanies the worked examples in *Moving Beyond Repeated Measure
 
 Open `lmm-ergonomics-guide.Rproj` in RStudio before running the code. This sets the project folder as the working directory, which allows R to find the supplied dataset.
 
+```{r}
+#| label: setup
+#| include: false
+
+options(width = 120)
+```
+
 ## 1. Load the packages
 
 Packages extend what R can do. The `library()` function makes an installed package available in the current R session.
@@ -434,7 +441,7 @@ anova_bins <- ezANOVA(
   type = 3
 )
 
-print(anova_bins)
+print(anova_bins$ANOVA)
 ```
 
 Under these ideal conditions and equivalent model specifications, the rANOVA and factor-based LMM produce the same tests for the fixed effects.
@@ -858,7 +865,7 @@ anova_bins_missing <- ezANOVA(
   type = 3
 )
 
-print(anova_bins_missing)
+print(anova_bins_missing$ANOVA)
 
 participants_retained <- unique(
   ergo_anova_missing[c("Participant", "Sex")]
