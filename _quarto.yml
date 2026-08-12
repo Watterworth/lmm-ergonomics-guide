@@ -1,0 +1,16 @@
+project:
+  type: default
+  output-dir: _site
+  execute-dir: project
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+    toc-depth: 3
+    code-copy: true
+
+execute:
+  warning: false
+  message: false
+

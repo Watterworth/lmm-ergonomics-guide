@@ -1,0 +1,9 @@
+_site/
+/.quarto/
+*.Rproj.user/
+.Rhistory
+.RData
+.DS_Store
+continuous_vs_factor_analysis.png
+
+**/*.quarto_ipynb
