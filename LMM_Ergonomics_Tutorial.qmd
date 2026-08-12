@@ -293,16 +293,6 @@ continuous_plot <- ggplot(
   geom_point(size = 3.4, alpha = 0.75) +
   facet_wrap(~ Panel) +
   scale_colour_viridis_d(option = "D", end = 0.85) +
-  scale_x_continuous(
-    limits = c(0, 70),
-    breaks = seq(0, 70, by = 10),
-    expand = expansion(mult = c(0, 0.03))
-  ) +
-  scale_y_continuous(
-    limits = c(0, 25),
-    breaks = seq(0, 25, by = 5),
-    expand = expansion(mult = c(0, 0.03))
-  ) +
   guides(
     colour = guide_legend(nrow = 1, byrow = TRUE)
   ) +
@@ -344,11 +334,6 @@ factor_plot <- ggplot(
   facet_wrap(~ Panel) +
   scale_colour_viridis_d(option = "D", end = 0.85) +
   scale_fill_viridis_d(option = "D", end = 0.85) +
-  scale_y_continuous(
-    limits = c(0, 25),
-    breaks = seq(0, 25, by = 5),
-    expand = expansion(mult = c(0, 0.03))
-  ) +
   guides(
     fill = "none",
     colour = guide_legend(nrow = 1, byrow = TRUE)
@@ -575,10 +560,7 @@ emm_bins_figure <- ggplot(
   geom_line(linewidth = 0.8) +
   geom_point(size = 3) +
   geom_errorbar(
-    aes(
-      ymin = lower.CL,
-      ymax = upper.CL
-    ),
+    aes(ymin = lower.CL, ymax = upper.CL),
     width = 0.08,
     linewidth = 0.8
   ) +
@@ -627,10 +609,6 @@ emm_bins_figure <- ggplot(
     size = 5
   ) +
   facet_wrap(~ Sex) +
-  scale_x_continuous(
-    breaks = seq_along(reach_order),
-    labels = reach_order
-  ) +
   scale_colour_viridis_d(
     option = "D",
     end = 0.85
@@ -763,14 +741,9 @@ continuous_model_figure <- sjPlot::plot_model(
   title = NULL,
   legend.title = "Sex"
 ) +
-  scale_x_continuous(
-    labels = function(x) {
-      round(x * 10 + reach_center_cm)
-    }
-  ) +
   labs(
     x = "Reach Distance (cm)",
-    y = "Estimated Shoulder Moment (Nm)",
+    y = "Shoulder Moment (Nm)",
     title = ""
   ) +
   theme_classic(base_size = 14) +

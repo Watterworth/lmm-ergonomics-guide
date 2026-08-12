@@ -90,16 +90,6 @@ continuous_plot <- ggplot(
   geom_point(size = 3.4, alpha = 0.75) +
   facet_wrap(~ Panel) +
   scale_colour_viridis_d(option = "D", end = 0.85) +
-  scale_x_continuous(
-    limits = c(0, 70),
-    breaks = seq(0, 70, by = 10),
-    expand = expansion(mult = c(0, 0.03))
-  ) +
-  scale_y_continuous(
-    limits = c(0, 25),
-    breaks = seq(0, 25, by = 5),
-    expand = expansion(mult = c(0, 0.03))
-  ) +
   guides(
     colour = guide_legend(nrow = 1, byrow = TRUE)
   ) +
@@ -142,11 +132,6 @@ factor_plot <- ggplot(
   facet_wrap(~ Panel) +
   scale_colour_viridis_d(option = "D", end = 0.85) +
   scale_fill_viridis_d(option = "D", end = 0.85) +
-  scale_y_continuous(
-    limits = c(0, 25),
-    breaks = seq(0, 25, by = 5),
-    expand = expansion(mult = c(0, 0.03))
-  ) +
   guides(
     fill = "none",
     colour = guide_legend(nrow = 1, byrow = TRUE)
@@ -169,15 +154,7 @@ analysis_comparison_figure <-
 
 print(analysis_comparison_figure)
 
-ggsave(
-  filename = "continuous_vs_factor_analysis.png",
-  plot = analysis_comparison_figure,
-  width = 12,
-  height = 5.8,
-  units = "in",
-  dpi = 600,
-  bg = "white"
-)
+
 
 # ============================================================
 # EXAMPLE 1A
@@ -204,6 +181,7 @@ anova_bins_lmm <- anova(
   type = 3,
   ddf = "Satterthwaite"
 )
+
 print(anova_bins_lmm)
 
 # The model summary is included for reference.
@@ -219,7 +197,8 @@ anova_bins <- ezANOVA(
   detailed = TRUE,
   type = 3
 )
-print(anova_bins)
+
+print(anova_bins$ANOVA)
 
 # Estimate the model-based means for each reach bin within each sex.
 emm_bins <- emmeans(
@@ -227,6 +206,7 @@ emm_bins <- emmeans(
   ~ Reach_bin | Sex,
   lmer.df = "satterthwaite"
 )
+
 print(emm_bins)
 
 # Compare the three reach bins within each sex.
@@ -234,6 +214,7 @@ pairs_bins <- pairs(
   emm_bins,
   adjust = "tukey"
 )
+
 print(pairs_bins)
 
 # Quickly plot the EMMs and their comparisons.
@@ -302,6 +283,7 @@ for (current_sex in unique(as.character(significant_pairs$Sex))) {
 }
 
 # Create a customized EMM figure with 95% confidence intervals.
+
 emm_bins_figure <- ggplot(
   emm_bins_df,
   aes(
@@ -363,11 +345,10 @@ emm_bins_figure <- ggplot(
     size = 5
   ) +
   facet_wrap(~ Sex) +
-  scale_x_continuous(
-    breaks = seq_along(reach_order),
-    labels = reach_order
+  scale_colour_viridis_d(
+    option = "D",
+    end = 0.85
   ) +
-  scale_colour_viridis_d(option = "D", end = 0.85) +
   labs(
     x = "Reach Condition",
     y = "Estimated Shoulder Moment (Nm)"
@@ -391,6 +372,7 @@ reach_center_cm <- mean(
   ergo_simple$Reach_cm,
   na.rm = TRUE
 )
+
 print(reach_center_cm)
 
 # Center reach at its average and divide by 10.
@@ -413,6 +395,7 @@ anova_centered <- anova(
   type = 3,
   ddf = "Satterthwaite"
 )
+
 print(anova_centered)
 
 print(summary(model_cont))
@@ -425,6 +408,7 @@ reach_trends <- emtrends(
   var = "Reach_c10",
   lmer.df = "satterthwaite"
 )
+
 print(reach_trends)
 
 # Test both slopes against zero using Holm adjustment.
@@ -433,6 +417,7 @@ reach_trends_zero <- test(
   null = 0,
   adjust = "holm"
 )
+
 print(reach_trends_zero)
 
 # Directly compare the male and female slopes.
@@ -441,9 +426,11 @@ reach_trends_pair <- pairs(
   reach_trends,
   adjust = "none"
 )
+
 print(reach_trends_pair)
 
 # Plot the fitted population-level relationships over the raw data.
+
 continuous_model_figure <- sjPlot::plot_model(
   model_cont,
   type = "pred",
@@ -455,14 +442,9 @@ continuous_model_figure <- sjPlot::plot_model(
   title = NULL,
   legend.title = "Sex"
 ) +
-  scale_x_continuous(
-    labels = function(x) {
-      round(x * 10 + reach_center_cm)
-    }
-  ) +
   labs(
     x = "Reach Distance (cm)",
-    y = "Estimated Shoulder Moment (Nm)",
+    y = "Shoulder Moment (Nm)",
     title = ""
   ) +
   theme_classic(base_size = 14) +
@@ -512,6 +494,7 @@ anova_bins_missing_attempt <- try(
   ),
   silent = TRUE
 )
+
 print(anova_bins_missing_attempt)
 
 # Identify participants with at least one missing outcome.
@@ -520,6 +503,7 @@ participants_with_missing <- unique(
     is.na(ergo_missing$Shoulder_Moment_Nm)
   ]
 )
+
 print(participants_with_missing)
 
 # Remove those participants for the complete-case rANOVA.
@@ -538,12 +522,13 @@ anova_bins_missing <- ezANOVA(
   detailed = TRUE,
   type = 3
 )
-print(anova_bins_missing)
+print(anova_bins_missing$ANOVA)
 
 # Count the complete-case participants retained within each sex.
 participants_retained <- unique(
   ergo_anova_missing[c("Participant", "Sex")]
 )
+
 print(table(participants_retained$Sex))
 
 # Fit the factor-based LMM to all available outcomes.
@@ -560,6 +545,7 @@ anova_bins_lmm_missing <- anova(
   type = 3,
   ddf = "Satterthwaite"
 )
+
 print(anova_bins_lmm_missing)
 
 emm_bins_missing <- emmeans(
@@ -567,12 +553,14 @@ emm_bins_missing <- emmeans(
   ~ Reach_bin | Sex,
   lmer.df = "satterthwaite"
 )
+
 print(emm_bins_missing)
 
 pairs_bins_missing <- pairs(
   emm_bins_missing,
   adjust = "tukey"
 )
+
 print(pairs_bins_missing)
 
 # Compare the number of participants and observations retained.
@@ -594,6 +582,7 @@ data_retained <- data.frame(
     nobs(model_bins_missing)
   )
 )
+
 print(data_retained)
 
 # ============================================================
