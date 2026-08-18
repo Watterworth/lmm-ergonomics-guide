@@ -2,7 +2,7 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21997423.svg)](https://doi.org/10.5281/zenodo.21997423)
 
-This repository contains a beginner-oriented tutorial, illustrative dataset, and R code for the worked examples in *Moving Beyond Repeated Measures ANOVA: A Practical Guide to Mixed-Effects Modeling for Ergonomics Research*.
+This repository contains a beginner-oriented tutorial, illustrative dataset, and R code for the worked examples in *Moving Beyond Repeated Measures ANOVA: A Practical Guide to Mixed-Effects Modelling for Ergonomics Research*.
 
 ## Authors
 
