@@ -56,7 +56,7 @@ execute:
 
 ## How to use this tutorial
 
-This tutorial accompanies the worked examples in *Moving Beyond Repeated Measures ANOVA: A Practical Guide to Mixed-Effects Modeling for Ergonomics Research*. It assumes only basic familiarity with R. Each object is created before it is used, and the code can be run from top to bottom.
+This tutorial accompanies the worked examples in *Moving Beyond Repeated Measures ANOVA: A Practical Guide to Mixed-Effects Modeling for Ergonomics Research*. It assumes only basic familiarity with R. Each object is created before it is used, and the code can be run from top to bottom. If you arrived at this tutorial without the accompanying project files, they are available in the [GitHub repository](https://github.com/Watterworth/lmm-ergonomics-guide).
 
 Open `lmm-ergonomics-guide.Rproj` in RStudio before running the code. This sets the project folder as the working directory, which allows R to find the supplied dataset.
 
