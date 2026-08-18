@@ -72,7 +72,11 @@ This work was supported by the Natural Sciences and Engineering Research Council
 
 ## Citation
 
-Citation information is available through the **Cite this repository** link on GitHub. The archived version corresponding to the published article will also be made available through Zenodo.
+If you use the tutorial, code, or illustrative data, please cite the archived version of this repository:
+
+[https://doi.org/10.5281/zenodo.21997423](https://doi.org/10.5281/zenodo.21997423)
+
+Complete citation metadata is also available in [`CITATION.cff`](CITATION.cff).
 
 ## License
 
