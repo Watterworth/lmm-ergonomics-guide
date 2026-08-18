@@ -2,9 +2,13 @@ cff-version: 1.2.0
 message: "Please cite the accompanying article. When referring specifically to the code or tutorial, please also cite this repository."
 
 type: software
-title: "Mixed-Effects Modelling for Ergonomics Research"
+title: "Mixed-Effects Modeling for Ergonomics Research"
 version: 1.0.0
 license: MIT
+doi: "10.5281/zenodo.21997423"
+date-released: 2026-08-18
+repository-code: "https://github.com/Watterworth/lmm-ergonomics-guide"
+url: "https://doi.org/10.5281/zenodo.21997423"
 
 authors:
   - given-names: "Michael W. B."
@@ -12,14 +16,15 @@ authors:
     orcid: "https://orcid.org/0000-0001-5227-4554"
     affiliation: "Faculty of Health Sciences, Ontario Tech University"
 
+  - given-names: "Michael A."
+    family-names: "Rotondi"
+    orcid: "https://orcid.org/0000-0003-0895-5752
+    affiliation: "School of Kinesiology and Health Science, York University"
+
   - given-names: "Nicholas J."
     family-names: "La Delfa"
     orcid: "https://orcid.org/0000-0002-6928-5441"
     affiliation: "Faculty of Health Sciences, Ontario Tech University"
-
-  - given-names: "Michael A."
-    family-names: "Rotondi"
-    affiliation: "School of Kinesiology and Health Science, York University"
 
 repository-code: "https://github.com/Watterworth/lmm-ergonomics-guide"
 url: "https://watterworth.github.io/lmm-ergonomics-guide/"
